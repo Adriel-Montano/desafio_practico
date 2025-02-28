@@ -1,42 +1,195 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e1e1e1;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+div {
+  min-height: 100vh;
+  padding: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+header {
+  background: #1db954;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+h2 {
+  color: #b3b3b3;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.materia-grid {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.materia-card {
+  position: relative;
+  border-radius: 8px;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.materia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.materia-color-1 {
+  background: linear-gradient(135deg, #ff6f61, #d94a3d);
+}
+
+.materia-color-2 {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+}
+
+.materia-color-3 {
+  background: linear-gradient(135deg, #f7b733, #d89e29);
+}
+
+.materia-color-4 {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.materia-color-5 {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.materia-color-6 {
+  background: linear-gradient(135deg, #e91e63, #c2185b);
+}
+
+.materia-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.materia-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.materia-content p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.materia-content button {
+  background-color: #1db954;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  align-self: flex-start;
+}
+
+.materia-content button:hover {
+  background-color: #1ed760;
+  transform: translateY(-1px);
+}
+
+div > div:last-child ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+div > div:last-child ul li {
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+div > div:last-child ul li button {
+  background-color: #e53e3e;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+div > div:last-child ul li button:hover {
+  background-color: #c53030;
+  transform: translateY(-1px);
+}
+
+.clear-button {
+  background-color: #1db954;
+  color: white;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.clear-button:hover {
+  background-color: #1ed760;
+  transform: translateY(-1px);
+}
+
+div > div:last-child {
+  background-color: #181818;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+div > div:last-child p {
+  font-size: 1rem;
+  color: #b3b3b3;
+  margin: 10px 0;
+}
+
+div > div:last-child p:last-of-type {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #b3b3b3;
 }
